@@ -12,8 +12,10 @@ namespace ASCII
         static void Main(string[] args)
         {
             Console.Clear();
+            //intro runs welcome audio and ascii art both logo and welcome message through ascii
             intro();
             Margins("=");
+
             Console.WriteLine($" Welcome to Our Cyber Security Awareness ".PadLeft(50));
             Console.WriteLine($"\n Am your AI Bot Please Enter your name\n".PadLeft(45));
             Console.ResetColor();
@@ -24,6 +26,10 @@ namespace ASCII
             Console.WriteLine($" Pleased to meet you {name}, I'll be your AI Assistant".PadLeft(55));
             Console.WriteLine($" Let's dive into our journey".PadLeft(45));
             Console.ResetColor();
+
+            // UP TO HERE ALL CODE IS RUN ONCE ONCE THE PROGRAM IS EXECUTED
+            //PHASE1 RUNS ALL THE REPETITIVE CODE OF THE PROGRAM OR ATLEAST CODE THAT WILL BE CALLLED ON MULTIPLE OCASSIONS
+
             phase1();
         }
 
@@ -57,27 +63,27 @@ namespace ASCII
                             Console.WriteLine("\n (1) Prevents unauthorized access.");
                             Console.WriteLine(" (2) Protects personal information.");
                             Console.WriteLine(" (3) Reduces identity theft risk.");
-                            Thread.Sleep(2000); // Pause for readability
+                            Thread.Sleep(5000); // Pause for readability
                             phase2();
                             return;
                         case "2":
                             Console.WriteLine("\n Use strong passwords, enable 2FA, don’t reuse passwords, use a password manager.");
-                            Thread.Sleep(2000);
+                            Thread.Sleep(5000);
                             phase2();
                             return;
                         case "3":
                             Console.WriteLine("\n A strong password should include 12+ characters, uppercase & lowercase letters, numbers, and symbols.");
-                            Thread.Sleep(2000);
+                            Thread.Sleep(5000);
                             phase2();
                             return;
                         case "4":
                             Console.WriteLine("\n Common mistakes: Using short passwords, reusing passwords, writing them down.");
-                            Thread.Sleep(2000);
+                            Thread.Sleep(5000);
                             phase2();
                             return;
                         case "5":
                             Console.WriteLine("\n Additional security: Use passphrases, monitor account activity, enable account recovery options.");
-                            Thread.Sleep(2000);
+                            Thread.Sleep(5000);
                             phase2();
                             return;
                         default:
@@ -140,17 +146,17 @@ namespace ASCII
                     {
                         case "1":
                             Console.WriteLine("\n Types: Email Phishing, Spear Phishing, Vishing, Smishing, Clone Phishing.");
-                            Thread.Sleep(2000);
+                            Thread.Sleep(5000);
                             phase2();
                             return;
                         case "2":
                             Console.WriteLine("\n Dangers: Data theft, malware spread, financial loss.");
-                            Thread.Sleep(2000);
+                            Thread.Sleep(5000);
                             phase2();
                             return;
                         case "3":
                             Console.WriteLine("\n Protection: Check sender email, avoid suspicious links, enable 2FA.");
-                            Thread.Sleep(2000);
+                            Thread.Sleep(5000);
                             phase2();
                             return;
                         default:
@@ -213,17 +219,17 @@ namespace ASCII
                     {
                         case "1":
                             Console.WriteLine("\n Features: Phishing protection, malware detection, HTTPS encryption.");
-                            Thread.Sleep(2000);
+                            Thread.Sleep(5000);
                             phase2();
                             return;
                         case "2":
                             Console.WriteLine("\n How to Enable: Adjust browser security settings in Chrome, Firefox, Edge, Safari.");
-                            Thread.Sleep(2000);
+                            Thread.Sleep(5000);
                             phase2();
                             return;
                         case "3":
                             Console.WriteLine("\n Tips: Check URLs, avoid suspicious links, keep browser updated.");
-                            Thread.Sleep(2000);
+                            Thread.Sleep(5000);
                             phase2();
                             return;
                         default:
@@ -267,7 +273,7 @@ namespace ASCII
             Console.WriteLine("\n Welcome\n".PadLeft(40));
             Console.ResetColor();
 
-            string audioFilePath = @"C:\\Users\tshia\\OneDrive\\Desktop\\WhatsApp Audio 2025-03-12 at 21.33.38_a66c42e2.waptt.wav";
+            string audioFilePath = @"C:\\Users\\tshia\\source\\repos\\ProgA1_ST10070515_PartOne\\Greetiings.wav";
             try
             {
                 SoundPlayer player = new SoundPlayer(audioFilePath);
@@ -431,14 +437,14 @@ namespace ASCII
                     case "hello":
                         Console.WriteLine($"\n Hi There {name}".PadLeft(40));
                         Console.WriteLine($" That was a great start {name}, in the question below only select the number next to the topic you choose".PadLeft(60));
-                        Thread.Sleep(1500);
+                        Thread.Sleep(15000);
                         phase2();
                         break;
                     case "how are you":
                     case "how are you?":
                         Console.WriteLine($"\n Am well and yourself {name}?".PadLeft(45));
                         Console.WriteLine($" That was a great start {name}, in the question below only select the number next to the topic you choose".PadLeft(60));
-                        Thread.Sleep(1500);
+                        Thread.Sleep(15000);
                         phase2();
                         break;
                     case "what is your purpose":
@@ -447,14 +453,14 @@ namespace ASCII
                     case "what's your purpose?":
                         Console.WriteLine($"\n Well {name}, My mission is to inform you in Cybersecurity and some related topics".PadLeft(55));
                         Console.WriteLine($" That was a great start {name}, in the question below only select the number next to the topic you choose".PadLeft(60));
-                        Thread.Sleep(1500);
+                        Thread.Sleep(15000);
                         phase2();
                         break;
                     case "what can i ask you about":
                     case "what can i ask you about?":
                         Console.WriteLine($"\n Well {name}, Password Security, phishing and safe browsing".PadLeft(50));
                         Console.WriteLine($" That was a great start {name}, in the question below only select the number next to the topic you choose".PadLeft(60));
-                        Thread.Sleep(1500);
+                        Thread.Sleep(15000);
                         phase2();
                         break;
                     default:
@@ -521,7 +527,7 @@ namespace ASCII
                             Console.ForegroundColor = ConsoleColor.Magenta;
                             Console.WriteLine($"\n It's sad to see you leave, I hope you learned something interesting, until next time {name}".PadLeft(60));
                             Console.ResetColor();
-                            Thread.Sleep(2000);
+                            Thread.Sleep(5000);
                             Environment.Exit(0);
                             return;
                         default:
@@ -564,7 +570,7 @@ namespace ASCII
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine($"\n It's sad to see you leave, {name}. I hope you learned something new.".PadLeft(55));
             Console.ResetColor();
-            Thread.Sleep(2000);
+            Thread.Sleep(5000);
             Environment.Exit(0);
         }
 
@@ -586,3 +592,5 @@ namespace ASCII
         }
     }
 }
+
+
